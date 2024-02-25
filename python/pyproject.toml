@@ -1,0 +1,24 @@
+[tool.poetry]
+name = "speech2text"
+version = "0.1.0"
+description = "Speech Recognition project for english speech"
+authors = ["Rashid Nizamani"]
+
+[tool.poetry.dependencies]
+python = "~3.9.6"
+typer = "^0.3.2"
+pydantic = "^1.10.1"
+typing-extensions = "4.5.0"
+torch = "<2.1.1"
+torchvision = ">0.13.1"
+numpy = ">=1.20.3"
+pandas = ">1.4.0"
+datasets = ">2.14.5"
+transformers = "^4.35.2"
+soundfile = ">0.11.0"
+librosa = ">0.9.0"
+evaluate = ">0.2.0"
+accelerate= ">0.21.0"
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
