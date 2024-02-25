@@ -9,10 +9,11 @@ from speech2text.training.metrics import compute_metrics
 from huggingface_hub import login
 
 logger = logging.getLogger(__name__)
-login()
 
 
-def train(output_path: Path, config: Config):
+
+def train(output_path: Path, token:str, config: Config):
+    login(token = token)
     train_dataset, validation_dataset = load_data(config)
     auto_config, processor = initialize_processor(config)
     train_dataset = process_dataset(train_dataset, processor, config)

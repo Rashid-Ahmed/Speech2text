@@ -9,9 +9,10 @@ app = typer.Typer()
 
 
 @app.command()
-def train(output_path: Path = typer.Argument(None, help="Directory to save model in ")):
+def train(output_path: Path = typer.Argument(None, help="Directory to save model in "),
+          token: str = typer.Argument(None, help="Your Huggingface account token ")):
     config = Config()
-    speech2text.train(output_path, config)
+    speech2text.train(output_path, token, config)
 
 
 @app.command()
